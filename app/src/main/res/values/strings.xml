@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">Music Hub</string>
+
+    <string name="host_server">Open a Hub\u00A0</string>
+    <string name="join_server">Join a Hub\u00A0</string>
+    <string name="settings">Settings</string>
+
+    <string name="host_description">Create a Hub for you and your friends</string>
+    <string name="join_description">Join a Hub of a friend or join others</string>
+    <string name="settings_description">Here you can customize the settings to your liking</string>
+
+    <string name="go">GO</string>
+
+    <string name="host">Host</string>
+    <string name="join">Join</string>
+
+    <string name="password">Password</string>
+    <string name="hub_name">Hub Name</string>
+
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="rename">Rename</string>
+    <string name="username_placeholder">Username\n%s</string>
+
+    <string name="host_name_placeholder">Hostname: %s</string>
+    <string name="user_connected">User(\s)\ connected: %d/7</string>
+
+    <string name="close_hub">Close Hub</string>
+    <string name="hub_stats">Hub Statistics</string>
+    <string name="playlist">Playlist</string>
+    <string name="your_name">Your Name</string>
+
+    <string name="visible">visible</string>
+    <string name="go_visible">Go visible</string>
+    <string name="visible_timer_placeholder">%d</string>
+
+    <string name="none_found">None Found!</string>
+    <string name="none_paired">None Paired!</string>
+
+    <string name="known">SAVED DEVICES</string>
+    <string name="discovered">DISCOVERED DEVICES</string>
+
+    <string name="post">Post</string>
+    <string name="exit">Exit</string>
+
+    <string name="message_placeholder">Message</string>
+    <string name="chat">Chat</string>
+
+    <string name="enter_you_name">ENTER NEW NAME (MIN. 2 CHARACTERS)</string>
+
+    <!-- User Layout -->
+    <string name="connected_to">Connected to %s</string>
+
+    <!-- New Device Activity -->
+    <string name="search_devices">Searching for devices....</string>
+    <string name="select_device">Select a device</string>
+
+    <!-- Host Layout -->
+    <string name="play_title">Play</string>
+    <string name="skip_title">Skip</string>
+
+    <!-- Host Activity -->
+    <string name="added_track">Added Track: <b>$s</b> <i>by</i> <b>$s</b></string>
+
+    <!-- Settings Layout -->
+    <string name="wip">Kinda empty here\nO.o\nCome back in the next update</string>
+
+    <!-- Other -->
+    <string name="bluetoothHeading">Bluetooth Deactivated</string>
+    <string name="bluetoothMsg">Bluetooth is necessary for this app to work properly!\n\n
+        Please <b><font color="#4ed126">activate</font></b> it to be able to use all features.</string>
+
+    <string name="ver">ver. </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

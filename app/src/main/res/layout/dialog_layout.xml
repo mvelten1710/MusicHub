@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/roboto_new"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Rename"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/colorPrimary"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:errorEnabled="true"
+        android:hint="@string/enter_you_name"
+        app:errorTextColor="#FF3000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="14sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/editTextLayout"
+        android:layout_marginTop="10dp"
+        android:background="@color/grayDivider"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/agree"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider2"
+        android:drawableLeft="@drawable/ic_done_24px"
+        android:fontFamily="@font/roboto_new"
+        android:gravity="start|center"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:text="Rename"
+        android:textColor="#000000"
+        app:iconPadding="35dp"
+        app:rippleColor="#CCCCCC" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/agree"
+        android:background="@color/grayDivider" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider1"
+        android:drawableLeft="@drawable/ic_clear_24px"
+        android:fontFamily="@font/roboto_new"
+        android:gravity="start|center"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:text="Cancel"
+        android:textColor="#000000"
+        app:iconPadding="35dp"
+        app:rippleColor="#CCCCCC" />
+</RelativeLayout>

@@ -1,0 +1,2 @@
+include ':app', ':spotify_app_remote'
+rootProject.name='MusicHub'

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <TextView
+        android:id="@+id/deviceName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/raise"
+        app:layout_constraintStart_toEndOf="@+id/btImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/deviceName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/deviceName"
+        app:srcCompat="@drawable/ic_person_24px" />
+
+    <ImageButton
+        android:id="@+id/kick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="10dp"
+        android:layout_marginEnd="5dp"
+        android:rotation="45"
+        app:layout_constraintBottom_toBottomOf="@+id/btImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btImage"
+        app:srcCompat="@drawable/ic_add_24px" />
+
+    <ImageButton
+        android:id="@+id/revoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@null"
+        android:padding="10dp"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@+id/btImage"
+        app:layout_constraintEnd_toStartOf="@+id/kick"
+        app:layout_constraintTop_toTopOf="@+id/btImage"
+        app:srcCompat="@drawable/arrow_back_24px" />
+
+    <ImageButton
+        android:id="@+id/raise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@null"
+        android:padding="10dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/btImage"
+        app:layout_constraintEnd_toStartOf="@+id/revoke"
+        app:layout_constraintTop_toTopOf="@+id/btImage"
+        app:srcCompat="@drawable/arrow_back_24px" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

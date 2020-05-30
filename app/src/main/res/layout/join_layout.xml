@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:animateLayoutChanges="true"
+    android:id="@+id/join_layout">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/arrow_back_24px"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/roboto_new"
+        android:text="Join others"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toTopOf="@+id/backButton" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/grayDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_add_24px"
+        app:rippleColor="#CCCCCC"
+        app:iconPadding="35dp"
+        app:iconGravity="start"
+        android:fontFamily="@font/roboto_new"
+        android:gravity="start|center"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:text="Add new Device"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/savedDevicesListView"
+        android:background="@color/grayDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+    <ListView
+        android:id="@+id/savedDevicesListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:listSelector="#75969696"
+        android:smoothScrollbar="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/otherDevicesButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_chevron_right_24px"
+        android:fontFamily="@font/roboto_new"
+        android:gravity="start|center"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:text="See all"
+        android:textColor="#000000"
+        app:iconPadding="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/savedDevicesListView"
+        app:rippleColor="#CCCCCC" />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/otherDevicesButton"
+        android:background="@color/grayDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherDevicesButton" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/renameButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_create_24px"
+        android:fontFamily="@font/roboto_new"
+        android:gravity="start|center"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:text="@string/username_placeholder"
+        android:textColor="#000000"
+        app:iconPadding="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider6"
+        app:rippleColor="#CCCCCC" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/savedDevicesListView"
+        android:background="@color/grayDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/renameButton" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/joinButton"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_chevron_right_24px"
+        android:fontFamily="@font/roboto_new"
+        android:gravity="start|center"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:text="Join"
+        android:textColor="#000000"
+        app:iconPadding="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/renameButton"
+        app:rippleColor="#CCCCCC" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grayDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinButton" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previously connected devices "
+        android:fontFamily="@font/roboto_new"
+        android:layout_marginStart="10dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="italic"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+</androidx.constraintlayout.widget.ConstraintLayout>
