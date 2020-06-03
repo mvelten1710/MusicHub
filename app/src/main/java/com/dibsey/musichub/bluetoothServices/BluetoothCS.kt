@@ -1,6 +1,9 @@
 package com.dibsey.musichub.bluetoothServices
 
 import com.dibsey.musichub.adapter.*
+import com.dibsey.musichub.items.ActionItem
+import com.dibsey.musichub.items.PlaylistItem
+import com.dibsey.musichub.items.UserListItem
 import com.dibsey.musichub.spotify.Message
 
 interface BluetoothCS{

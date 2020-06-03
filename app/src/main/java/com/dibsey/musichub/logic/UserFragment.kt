@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.dibsey.musichub.R
 import com.dibsey.musichub.adapter.UserArrayAdapter
-import com.dibsey.musichub.adapter.UserListItem
+import com.dibsey.musichub.items.UserListItem
 import com.dibsey.musichub.bluetoothServices.BluetoothCS
 import kotlinx.android.synthetic.main.fragment_user.view.*
 

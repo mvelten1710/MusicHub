@@ -8,6 +8,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageButton
 import android.widget.TextView
 import com.dibsey.musichub.R
+import com.dibsey.musichub.items.PlaylistItem
 import com.dibsey.musichub.spotify.SpotifyService
 
 class PlaylistAdapter(): BaseAdapter() {

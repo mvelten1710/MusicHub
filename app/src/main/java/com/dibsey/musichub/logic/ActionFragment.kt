@@ -7,12 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.dibsey.musichub.R
 import com.dibsey.musichub.adapter.ActionAdapter
-import com.dibsey.musichub.adapter.ActionItem
+import com.dibsey.musichub.items.ActionItem
 import com.dibsey.musichub.bluetoothServices.BluetoothCS
-import com.dibsey.musichub.bluetoothServices.BluetoothServer
-import kotlinx.android.synthetic.main.fragment_action.*
 import kotlinx.android.synthetic.main.fragment_action.view.*
-import kotlinx.android.synthetic.main.user_layout.*
 
 class ActionFragment : Fragment() {
 

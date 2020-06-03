@@ -4,6 +4,7 @@ import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
@@ -35,6 +36,10 @@ class JoinFragment : Fragment() {
     private var listItemChecked = false
     private var listViewExpanded = false
 
+    private var sharedPref: SharedPreferences? = null
+    private val defaultUsername: String? = BluetoothAdapter.getDefaultAdapter().name
+    private var username: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -42,9 +47,8 @@ class JoinFragment : Fragment() {
     ): View{
 
         val view = inflater.inflate(R.layout.join_layout, container, false)
-        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
-        val defaultUsername = BluetoothAdapter.getDefaultAdapter().name
-        val username = sharedPref?.getString(getString(R.string.username_placeholder), defaultUsername)
+        sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+        username = sharedPref?.getString(getString(R.string.username_placeholder), defaultUsername)
         view.renameButton.text = resources.getString(R.string.username_placeholder, username)
 
         activity?.runOnUiThread {
@@ -192,6 +196,7 @@ class JoinFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == 1337){
             renameButton.text = data?.getStringExtra("username")
+            username = sharedPref?.getString(getString(R.string.username_placeholder), defaultUsername)
         }
         if(resultCode == 1338){
             if (data?.getStringExtra("deviceName") != null)

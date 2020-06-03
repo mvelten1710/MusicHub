@@ -3,7 +3,7 @@ package com.dibsey.musichub.spotify
 import android.content.Context
 import android.util.Log
 import com.dibsey.musichub.adapter.PlaylistAdapter
-import com.dibsey.musichub.adapter.PlaylistItem
+import com.dibsey.musichub.items.PlaylistItem
 import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
@@ -26,7 +26,6 @@ class SpotifyService(private val context: Context){
     private var keepWatching = false
     private var oneInstance = false
     private var trackHasEnded = true
-    private var firstTime = true
 
     fun start() {
         // Set the connection parameters
@@ -83,9 +82,6 @@ class SpotifyService(private val context: Context){
             //When Track is finished new Track, if present, starts
             trackHasEnded = false
             Log.d(TAG, "Playing: ${trackPlaylist[0]}")
-            if(firstTime)
-                removeTrack(0)
-                firstTime = false
             mSpotifyAppRemote?.playerApi?.play(trackPlaylist[0])
         }
     }
@@ -103,7 +99,7 @@ class SpotifyService(private val context: Context){
     fun removeTrack(pos: Int){
         Log.d("removeTrack", "${trackPlaylist.size} and ${playlist.size}")
         trackPlaylist.removeAt(pos)
-        playlist.removeAt(pos)
+        //playlist.removeAt(pos)
         playlistAdapter.notifyDataSetChanged()
     }
 

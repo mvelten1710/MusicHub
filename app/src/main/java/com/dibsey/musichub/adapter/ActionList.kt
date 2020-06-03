@@ -1,5 +1,6 @@
 package com.dibsey.musichub.adapter
 
+import com.dibsey.musichub.items.ActionItem
 import java.util.*
 
 class ActionList(list: Vector<ActionItem>) {
@@ -12,7 +13,7 @@ class ActionList(list: Vector<ActionItem>) {
         itemCount++
     }
 
-    fun getItem(pos: Int): ActionItem{
+    fun getItem(pos: Int): ActionItem {
         return itemList[pos]
     }
 

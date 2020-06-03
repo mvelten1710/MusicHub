@@ -6,12 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.dibsey.musichub.R
-import com.dibsey.musichub.adapter.ActionAdapter
-import com.dibsey.musichub.adapter.ActionItem
 import com.dibsey.musichub.adapter.PlaylistAdapter
-import com.dibsey.musichub.adapter.PlaylistItem
+import com.dibsey.musichub.items.PlaylistItem
 import com.dibsey.musichub.bluetoothServices.BluetoothCS
-import com.dibsey.musichub.bluetoothServices.BluetoothServer
 import com.dibsey.musichub.spotify.SpotifyService
 import kotlinx.android.synthetic.main.fragment_playlist.view.*
 

@@ -1,4 +1,4 @@
-package com.dibsey.musichub.adapter
+package com.dibsey.musichub.items
 
 import java.io.Serializable
 

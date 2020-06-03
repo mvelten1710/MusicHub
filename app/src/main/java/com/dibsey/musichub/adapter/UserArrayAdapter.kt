@@ -1,15 +1,14 @@
 package com.dibsey.musichub.adapter
 
-import android.bluetooth.BluetoothDevice
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.dibsey.musichub.bluetoothServices.BluetoothServer
 import com.dibsey.musichub.R
 import com.dibsey.musichub.bluetoothServices.BluetoothCS
+import com.dibsey.musichub.items.UserListItem
 
 class UserArrayAdapter(context: Context, private val dataSource: ArrayList<UserListItem>, private val btServer: BluetoothCS): BaseAdapter()
 {

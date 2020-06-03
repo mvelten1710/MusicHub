@@ -8,6 +8,9 @@ import android.os.Looper
 import android.util.Log
 import com.android.volley.RequestQueue
 import com.dibsey.musichub.adapter.*
+import com.dibsey.musichub.items.ActionItem
+import com.dibsey.musichub.items.PlaylistItem
+import com.dibsey.musichub.items.UserListItem
 import com.dibsey.musichub.spotify.SpotifyService
 import com.dibsey.musichub.spotify.Message
 import com.dibsey.musichub.spotify.TrackService
@@ -119,7 +122,7 @@ class BluetoothServer(queue: RequestQueue,
         private lateinit var inputStream: InputStream
         private lateinit var outputStream: OutputStream
         var id = mId
-        var firstTime = true
+        private var firstTime = true
 
         init {
             Log.d(TAG, "ConnectedThread: starting!")
@@ -308,7 +311,12 @@ class BluetoothServer(queue: RequestQueue,
     override fun addActionItemToList(message: Message){
         Log.d("addActionItemToList", message.name())
         Handler(Looper.getMainLooper()).post {
-            aList.add(ActionItem(message.user(), message.actionMessage()))
+            aList.add(
+                ActionItem(
+                    message.user(),
+                    message.actionMessage()
+                )
+            )
             aListAdapter.notifyDataSetChanged()
         }
     }
@@ -317,11 +325,21 @@ class BluetoothServer(queue: RequestQueue,
         Log.d("addToPlaylist", message.name())
         if(pListInitialized) {
             Handler(Looper.getMainLooper()).post {
-                pList.add(PlaylistItem(message.name(), message.info()))
+                pList.add(
+                    PlaylistItem(
+                        message.name(),
+                        message.info()
+                    )
+                )
                 pListAdapter.notifyDataSetChanged()
             }
         }else{
-            pListBuffer.add(PlaylistItem(message.name(), message.info()))
+            pListBuffer.add(
+                PlaylistItem(
+                    message.name(),
+                    message.info()
+                )
+            )
         }
     }
 
@@ -354,6 +372,7 @@ class BluetoothServer(queue: RequestQueue,
                 item.thread()?.write("<connection_closed>".toByteArray())
                 item.thread()?.cancel()
                 uList.remove(item)
+                mId--
                 return true
             }
         }

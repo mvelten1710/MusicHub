@@ -7,9 +7,11 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import com.dibsey.musichub.adapter.*
+import com.dibsey.musichub.items.ActionItem
+import com.dibsey.musichub.items.PlaylistItem
+import com.dibsey.musichub.items.UserListItem
 import com.dibsey.musichub.spotify.Message
 import java.io.*
-import java.nio.charset.Charset
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -225,7 +227,12 @@ class BluetoothClient(username: String?): BluetoothCS {
 
     override fun addActionItemToList(message: Message){
         Handler(Looper.getMainLooper()).post {
-            aList.add(ActionItem(message.user(), message.actionMessage()))
+            aList.add(
+                ActionItem(
+                    message.user(),
+                    message.actionMessage()
+                )
+            )
             aListAdapter.notifyDataSetChanged()
         }
     }
@@ -233,11 +240,21 @@ class BluetoothClient(username: String?): BluetoothCS {
     override fun addToPlaylist(message: Message){
         if(pListInitialized) {
             Handler(Looper.getMainLooper()).post {
-                pList.add(PlaylistItem(message.name(), message.info()))
+                pList.add(
+                    PlaylistItem(
+                        message.name(),
+                        message.info()
+                    )
+                )
                 pListAdapter.notifyDataSetChanged()
             }
         }else{
-            pListBuffer.add(PlaylistItem(message.name(), message.info()))
+            pListBuffer.add(
+                PlaylistItem(
+                    message.name(),
+                    message.info()
+                )
+            )
         }
     }
 

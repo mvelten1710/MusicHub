@@ -1,5 +1,6 @@
-package com.dibsey.musichub.adapter
+package com.dibsey.musichub.items
 
+import com.dibsey.musichub.adapter.UName
 import com.dibsey.musichub.bluetoothServices.BluetoothServer
 
 class UserListItem(btD: BluetoothServer.ConnectedThread? = null, name: String = ""){
@@ -15,7 +16,7 @@ class UserListItem(btD: BluetoothServer.ConnectedThread? = null, name: String = 
         return uName.name()
     }
 
-    fun uName(): UName{
+    fun uName(): UName {
         return uName
     }
 

@@ -1,15 +1,14 @@
 package com.dibsey.musichub.adapter
 
 import android.content.Context
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.text.HtmlCompat
 import com.dibsey.musichub.R
+import com.dibsey.musichub.items.ActionItem
 
 class ActionAdapter(context: Context, private val item: ArrayList<ActionItem>): BaseAdapter()
 {
