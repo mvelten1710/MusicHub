@@ -405,6 +405,7 @@ class BluetoothServer(queue: RequestQueue,
         pList = playlist
         pList.addAll(pListBuffer)
         pListAdapter.notifyDataSetChanged()
+        spotifyService.addPlaylistAndAdapter(pList, pListAdapter)
         pListInitialized = true
     }
 

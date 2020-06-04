@@ -66,7 +66,7 @@ class SpotifyService(private val context: Context){
                     mSpotifyAppRemote?.playerApi?.subscribeToPlayerState()?.setEventCallback {
                         handlePlayerState(it)
                     }
-                    Thread.sleep(1000)
+                    Thread.sleep(500)
                 }
             }
         }
@@ -92,6 +92,9 @@ class SpotifyService(private val context: Context){
         val isPlaying = !playerState.isPaused
 
         if (!trackHasEnded && position > 0 && duration > 0 && isPlaying) {
+            trackPlaylist.removeAt(0)
+            playlist.removeAt(0)
+            playlistAdapter.notifyDataSetChanged()
             trackHasEnded = true
         }
     }
@@ -99,8 +102,6 @@ class SpotifyService(private val context: Context){
     fun removeTrack(pos: Int){
         Log.d("removeTrack", "${trackPlaylist.size} and ${playlist.size}")
         trackPlaylist.removeAt(pos)
-        //playlist.removeAt(pos)
-        playlistAdapter.notifyDataSetChanged()
     }
 
     fun addPlaylistAndAdapter(p: ArrayList<PlaylistItem>, pA: PlaylistAdapter){
